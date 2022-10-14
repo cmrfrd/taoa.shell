@@ -1,0 +1,14 @@
+FROM alpine:3.14 as v86-builder
+
+RUN apk add --update curl clang make openjdk8 npm python3 git
+
+RUN curl \
+    --proto '=https' \
+    --tlsv1.2 -sSf https://sh.rustup.rs \
+    | sh -s -- -y && PATH="${HOME}/.cargo/bin:${PATH}" \
+    rustup target add wasm32-unknown-unknown
+
+RUN git clone -b cmrfrd/taoa https://github.com/cmrfrd/v86.git /v86
+WORKDIR /v86
+
+RUN PATH="${HOME}/.cargo/bin:${PATH}" make all
