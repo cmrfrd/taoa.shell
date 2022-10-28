@@ -61,7 +61,7 @@ podman run \
        -v $(pwd)/build:/build \
        -v $(pwd)/taoa_buildroot:/taoa_buildroot \
        -it taoa-buildroot \
-       bash -c "make BR2_EXTERNAL=/taoa_buildroot v86_defconfig && make -j${J} && sudo cp output/images/rootfs.iso9660 /build/taoa.iso"
+       bash -c "make BR2_EXTERNAL=/taoa_buildroot taoa_defconfig && make -j${J} && sudo cp output/images/rootfs.iso9660 /build/taoa.iso"
 ```
 
 and HUZZAH, you should have all the assets you need to host the shell
