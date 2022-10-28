@@ -6,11 +6,10 @@ export MNT_PATH=/mnt;
 export BIN_PATH=/mnt/bin;
 export CONTAINER_PATH=/mnt/containers;
 export CONTAINER_BIN_PATH=/mnt/containers/bin;
-export PATH=$BIN_PATH:$CONTAINER_BIN_PATH:$PATH;
+export PATH=$PATH:$CONTAINER_BIN_PATH;
+export PATH=$PATH:$BIN_PATH;
 export PS1='\[\e[38;5;81m\]\u\[\e[38;5;141m\]@\[\e[38;5;154m\]\h\[\e[38;5;186m\]:\[\e[38;5;197m\]\W \e[0m> ';
 SHELL=/bin/bash
 clear
-
-[ -z "$TMUX" ] && exec nice -n 50 sh -c "tmux new -As main"
-
-exec welcome
+startup
+welcome
