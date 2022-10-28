@@ -411,7 +411,7 @@ BR2_GENERATE_LOCALE="en_US.UTF-8"
 # BR2_SYSTEM_ENABLE_NLS is not set
 # BR2_TARGET_TZ_INFO is not set
 BR2_ROOTFS_USERS_TABLES=""
-BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_v86_PATH)/board/v86/rootfs_overlay/"
+BR2_ROOTFS_OVERLAY="/taoa_buildroot/board/taoa/rootfs_overlay/"
 BR2_ROOTFS_PRE_BUILD_SCRIPT=""
 BR2_ROOTFS_POST_BUILD_SCRIPT=""
 BR2_ROOTFS_POST_FAKEROOT_SCRIPT=""
@@ -434,7 +434,7 @@ BR2_LINUX_KERNEL_PATCH=""
 # BR2_LINUX_KERNEL_USE_DEFCONFIG is not set
 # BR2_LINUX_KERNEL_USE_ARCH_DEFAULT_CONFIG is not set
 BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
-BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="$(BR2_EXTERNAL_v86_PATH)/board/v86/linux.config"
+BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="/taoa_buildroot/board/taoa/linux.config"
 BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES=""
 BR2_LINUX_KERNEL_CUSTOM_LOGO_PATH=""
 BR2_LINUX_KERNEL_BZIMAGE=y
@@ -1121,7 +1121,7 @@ BR2_PACKAGE_QT6_ARCH_SUPPORTS=y
 # BR2_PACKAGE_BRLTTY is not set
 
 #
-# cc-tool needs a toolchain w/ C++, threads, wchar, gcc >= 4.9 
+# cc-tool needs a toolchain w/ C++, threads, wchar, gcc >= 4.9
 #
 # BR2_PACKAGE_CDRKIT is not set
 # BR2_PACKAGE_CRUCIBLE is not set
@@ -3300,35 +3300,35 @@ BR2_PACKAGE_MONGREL2_LIBC_SUPPORTS=y
 #
 
 #
-# Please note:                                           
+# Please note:
 #
 
 #
-# - Buildroot does *not* generate binary packages,       
+# - Buildroot does *not* generate binary packages,
 #
 
 #
-# - Buildroot does *not* install any package database.   
+# - Buildroot does *not* install any package database.
 #
 
 #
-# *                                                      
+# *
 #
 
 #
-# It is up to you to provide those by yourself if you    
+# It is up to you to provide those by yourself if you
 #
 
 #
-# want to use any of those package managers.             
+# want to use any of those package managers.
 #
 
 #
-# *                                                      
+# *
 #
 
 #
-# See the manual:                                        
+# See the manual:
 #
 
 #
@@ -4537,8 +4537,4 @@ BR2_TARGET_UBOOT_CUSTOM_PATCH_DIR=""
 
 #
 # External options
-#
-
-#
-# Customized image for running in browser with v86 (in /taoa_buildroot)
 #
