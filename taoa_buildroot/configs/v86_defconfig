@@ -43,19 +43,22 @@ BR2_ARCH_HAS_TOOLCHAIN_BUILDROOT=y
 BR2_ARCH="i686"
 BR2_NORMALIZED_ARCH="i386"
 BR2_ENDIAN="LITTLE"
-BR2_GCC_TARGET_ARCH="i686"
+BR2_GCC_TARGET_ARCH="pentium4"
 BR2_BINFMT_SUPPORTS_SHARED=y
 BR2_READELF_ARCH_NAME="Intel 80386"
+BR2_X86_CPU_HAS_MMX=y
+BR2_X86_CPU_HAS_SSE=y
+BR2_X86_CPU_HAS_SSE2=y
 # BR2_x86_i486 is not set
 # BR2_x86_i586 is not set
 # BR2_x86_x1000 is not set
-BR2_x86_i686=y
+# BR2_x86_i686 is not set
 # BR2_x86_pentiumpro is not set
 # BR2_x86_pentium_mmx is not set
 # BR2_x86_pentium_m is not set
 # BR2_x86_pentium2 is not set
 # BR2_x86_pentium3 is not set
-# BR2_x86_pentium4 is not set
+BR2_x86_pentium4=y
 # BR2_x86_prescott is not set
 # BR2_x86_nocona is not set
 # BR2_x86_core2 is not set
@@ -517,6 +520,11 @@ BR2_PACKAGE_FFMPEG_ARCH_SUPPORTS=y
 #
 # jack2 needs a toolchain w/ threads, C++, dynamic library
 #
+BR2_PACKAGE_KODI_ARCH_SUPPORTS=y
+
+#
+# kodi needs python3 w/ .py modules, a uClibc or glibc toolchain w/ C++, threads, wchar, dynamic library, gcc >= 4.9
+#
 
 #
 # kodi needs an OpenGL EGL backend with OpenGL or GLES support
@@ -529,6 +537,7 @@ BR2_PACKAGE_FFMPEG_ARCH_SUPPORTS=y
 #
 # miraclecast needs systemd and a glibc toolchain w/ threads and wchar
 #
+BR2_PACKAGE_MJPEGTOOLS_SIMD_SUPPORT=y
 
 #
 # mjpegtools needs a toolchain w/ C++, threads
@@ -1700,6 +1709,7 @@ BR2_PACKAGE_SQLITE=y
 #
 # BR2_PACKAGE_JASPER is not set
 # BR2_PACKAGE_JBIG2DEC is not set
+BR2_PACKAGE_JPEG_SIMD_SUPPORT=y
 # BR2_PACKAGE_JPEG is not set
 
 #
@@ -2437,7 +2447,7 @@ BR2_PACKAGE_LIBOPENH264_ARCH_SUPPORTS=y
 # BR2_PACKAGE_APR_UTIL is not set
 
 #
-# armadillo needs a toolchain w/ fortran, C++
+# armadillo needs a toolchain w/ C++
 #
 
 #
@@ -2694,6 +2704,9 @@ BR2_PACKAGE_LLVM_TARGET_ARCH="X86"
 #
 # msgpack needs a toolchain w/ C++
 #
+BR2_PACKAGE_OPENBLAS_DEFAULT_TARGET="NORTHWOOD"
+BR2_PACKAGE_OPENBLAS_ARCH_SUPPORTS=y
+# BR2_PACKAGE_OPENBLAS is not set
 # BR2_PACKAGE_ORC is not set
 # BR2_PACKAGE_P11_KIT is not set
 BR2_PACKAGE_POCO_ARCH_SUPPORTS=y
@@ -3387,8 +3400,7 @@ BR2_PACKAGE_BASH_LOADABLE_EXAMPLES=y
 BR2_PACKAGE_FILE=y
 # BR2_PACKAGE_GNUPG is not set
 BR2_PACKAGE_GNUPG2_DEPENDS=y
-BR2_PACKAGE_GNUPG2=y
-# BR2_PACKAGE_GNUPG2_GPGV is not set
+# BR2_PACKAGE_GNUPG2 is not set
 # BR2_PACKAGE_INOTIFY_TOOLS is not set
 # BR2_PACKAGE_LOCKFILE_PROGS is not set
 # BR2_PACKAGE_LOGROTATE is not set
@@ -3404,7 +3416,7 @@ BR2_PACKAGE_NEOFETCH=y
 # BR2_PACKAGE_SUDO is not set
 # BR2_PACKAGE_TIME is not set
 # BR2_PACKAGE_TINI is not set
-BR2_PACKAGE_TMUX=y
+# BR2_PACKAGE_TMUX is not set
 # BR2_PACKAGE_TTYD is not set
 # BR2_PACKAGE_WHICH is not set
 # BR2_PACKAGE_WTFUTIL is not set
