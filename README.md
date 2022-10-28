@@ -65,3 +65,9 @@ podman run \
 ```
 
 and HUZZAH, you should have all the assets you need to host the shell
+
+you can host the shell via
+
+```bash
+python3 -m http.server
+```
