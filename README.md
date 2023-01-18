@@ -2,6 +2,8 @@
 
 by: alex@taoa.io
 
+Link: https://taoa.io/shell
+
 This repo build the taoa browser shell meant to run in [`v86`](https://github.com/copy/v86/).
 
 ### How to build
